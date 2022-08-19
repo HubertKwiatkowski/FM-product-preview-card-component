@@ -21,10 +21,8 @@
   --fs-600: 1rem;
   --fs-800: 2rem;
 
-
   --fs-body: var(--fs-400);
   --fs-heading: var(--fs-800);
-  /* --fs-button: var(--fs-300); */
 
   --size-100: .25rem;
   --size-200: .5rem;
@@ -34,7 +32,7 @@
   --size-600: 1.25rem;
   --size-700: 1.5rem;
   --size-800: 3rem;
-  --size-900: 5rem;
+  --size-900: 5.75rem;
 }
 
 /* https://piccalil.li/blog/a-modern-css-reset/ */
@@ -118,6 +116,7 @@ body {
   width: 343px;
   margin: 28px auto;
   background-color: var(--clr-neutral-100);
+  /* padding-bottom: 24px; */
 }
 
 .image {
@@ -142,6 +141,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 5px;
   margin-bottom: var(--size-300);
+  line-height: 15px;
 }
 
 h3 {
@@ -162,12 +162,12 @@ h3 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: var(--size-600);
 }
 
 .promotion {
   font-family: var(--ff-heading);
   font-size: var(--fs-800);
+  line-height: 1;
   color: var(--clr-primary-400);
   margin-right: var(--size-500);
 }
@@ -176,7 +176,14 @@ h3 {
   text-decoration: line-through;
 }
 
+.btn-wrapper {
+  position: relative;
+  height: var(--size-900);
+}
+
 .btn {
+  position: absolute;
+  bottom: 24px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -189,11 +196,14 @@ h3 {
   background-color: var(--clr-primary-400);
   color: var(--clr-neutral-100);
   font-weight: var(--fw-bold);
-  margin-bottom: var(--size-700);
 }
 
 .cart-image {
   height: var(--size-400);
+}
+
+.add-to-cart {
+  line-height: var(--size-500);
 }
 
 /* Frontend Mentor elements styles */
