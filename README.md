@@ -28,16 +28,8 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/HubertKwiatkowski/FM-product-preview-card-component)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://fm-product-preview-card-component-five.vercel.app/)
 
-## My process
-
-### Built with
-
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- Mobile-first workflow
 
 ## Author
 
