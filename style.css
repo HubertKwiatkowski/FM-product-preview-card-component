@@ -105,6 +105,10 @@ svg {
 /*  general styling */
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-size: var(--fs-body);
   font-family: var(--ff-body);
   background-color: var(--clr-primary-100);
@@ -112,28 +116,50 @@ body {
 }
 
 .item {
+  display: flex;
+  flex-direction: column;
   border-radius: 10px;
   width: 343px;
   margin: 28px auto;
   background-color: var(--clr-neutral-100);
-  /* padding-bottom: 24px; */
+}
+
+@media (min-width: 1440px) {
+  .item {
+    height: 450px;
+    width: 600px;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+  }
 }
 
 .image {
   height: 240px;
-  background-image: url(images/image-product-mobile.jpg);
+  background-image: url("images/image-product-mobile.jpg");
   background-size: 343px 240px;
-  background-clip: border-box;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  background-repeat: no-repeat;
+  border-radius: 10px 10px 0 0;
 }
 
-@media (min-width: 376px) {
-
+@media (min-width: 1440px) {
+  .image {
+    height: 450px;
+    width: 300px;
+    background-image: url("images/image-product-desktop.jpg");
+    background-size: 300px 450px;
+    border-radius: 10px 0 0 10px;
+  }
 }
 
 .item-description {
-  margin: 24px;
+  padding: 24px;
+}
+
+@media (min-width: 1440px) {
+  .item-description {
+    width: 300px;
+    padding: 32px;
+  }
 }
 
 .type {
@@ -142,6 +168,12 @@ body {
   letter-spacing: 5px;
   margin-bottom: var(--size-300);
   line-height: 15px;
+}
+
+@media (min-width: 1440px) {
+  .type {
+    margin-bottom: var(--size-600);
+  }
 }
 
 h3 {
@@ -153,15 +185,35 @@ h3 {
   margin-bottom: var(--size-400);
 }
 
+@media (min-width: 1440px) {
+  h3 {
+    margin-bottom: var(--size-700);
+  }
+  
+}
+
 .item-text {
   margin-bottom: var(--size-700);
   line-height: 23px;
+}
+
+@media (min-width: 1440px) {
+  .item-text {
+    margin-bottom: 29px;
+  }
 }
 
 .price {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: var(--size-400);
+}
+
+@media (min-width: 1440px) {
+  .price {
+    margin-bottom: 30px;
+  }
 }
 
 .promotion {
@@ -176,21 +228,14 @@ h3 {
   text-decoration: line-through;
 }
 
-.btn-wrapper {
-  position: relative;
-  height: var(--size-900);
-}
 
 .btn {
-  position: absolute;
-  bottom: 24px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: var(--size-200);
-  border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   width: 100%;
   height: var(--size-800);
   background-color: var(--clr-primary-400);
@@ -205,6 +250,9 @@ h3 {
 .add-to-cart {
   line-height: var(--size-500);
 }
+
+
+
 
 /* Frontend Mentor elements styles */
 
